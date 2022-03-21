@@ -1,0 +1,114 @@
+package_version: 'v2022.2.0'
+
+data:
+  bathymetry: "data/external/bathymetry/GEBCO_2020.nc"
+  coordref: "data/external/coordref/dt_global_allsat_phy_l4_20000101.nc"
+  spg_index: "data/external/na-spg-ssh-pca/SSH_PCs_Monthly_199301_201912.csv"
+  tracmass_csv: data/csv/TRACMASS_run.csv
+  hdf5: data/hdf5
+  tracmass_hdf5: data/hdf5/TRACMASS_run.hdf5
+  indomain: data/hdf5/column_indomain.hdf5
+  iswall: data/hdf5/column_iswall.hdf5
+  depth: data/hdf5/column_depth.hdf5
+  mindepth: data/hdf5/column_mindepth.hdf5
+  maxage: data/hdf5/column_maxage.hdf5
+  initime: data/hdf5/column_initime.hdf5
+  spgi: data/hdf5/column_spgi.hdf5 # subpolar gyre
+  naoi: data/hdf5/column_naoi.hdf5 # north atlantic oscillation
+  eapi: data/hdf5/column_eapi.hdf5 # east atlantic pattern
+  lwdi: data/hdf5/column_lwdi.hdf5 # local wind direction
+  jeti: data/hdf5/column_jeti.hdf5 # jet cluster
+
+static:
+  coastline_resolution: "50m"
+  slice_density: 100
+  bathymetry_kw:
+    alpha: 0.3
+    cmap: "deep_r"
+    levels: [-200, -400, -800, -1600, -3200]
+  ssh: "data/external/ssh-allsat-monthly"
+  salinity: "data/external/dataset-armor-3d-rep-weekly"
+
+spgsi:
+  threshold: 0.5
+
+experiments:
+  v2020.1: data/DIANS/v2020.1
+  v2021.1: data/DIANS/v2021.1
+  v2021.1b1: data/DIANS/v2021.1b1
+  v2021.1b0: data/DIANS/v2021.1b0
+  v2021.2: data/DIANS/v2021.2
+  v2021.3: data/DIANS/v2021.3
+  v2021.4: data/DIANS/v2021.4
+  data:
+    ini: ini.csv
+    out: out.csv
+    run: run.csv
+    h5run: run.hdf5
+
+agemax:
+  v2021.1: 1.5
+  v2021.1b0: 1.5
+  v2021.1b1: 1.5
+  v2021.3: 0.5
+  v2021.4: 0.67
+
+timespan:
+  start: "1993-01-01T00:00:00"
+  end: "2019-12-31T00:00:00"
+
+regimes:
+  positive: "C3"
+  negative: "C0"
+  neutral: "grey"
+
+seed: 5236094
+
+tracmass:
+  timax: 2555
+  intrun: 9861
+  tst2: 9681
+  kill_zones_small:
+    ienw: [650, 800, 650, 650]
+    iene: [650, 800, 800, 800]
+    jens: [530, 530, 620, 530]
+    jenn: [620, 620, 620, 530]
+  kill_zones:
+    ienw: [560, 760, 560, 560]
+    iene: [560, 760, 760, 760]
+    jens: [522, 522, 522, 622]
+    jenn: [622, 622, 522, 622]
+  dimension:
+    lon: 1440
+    lat: 720
+
+filter_kws:
+  cutlen: 4
+  lowcut: 0.875
+  highcut: 1.167
+  fs: 12
+  order: 5
+
+pca:
+  domain:
+    box:
+      longitude: [-40, -10]
+      latitude: [45, 62]
+    ssh:
+      longitude: [-60, -10]
+      latitude: [45, 65]
+
+spaghetti:
+  samplesize: 5
+
+subplot_kw:
+  projection: "LambertConformal"
+  ccrs_kw:
+    central_longitude: -25.0
+    central_latitude: 55.0
+    false_easting: 0.0
+    false_northing: 0.0
+    standard_parallels: NULL
+    globe: NULL
+    cutoff: -35
+  crs_extent: [-40, 0, 40, 65]
