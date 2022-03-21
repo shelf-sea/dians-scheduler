@@ -1,0 +1,21 @@
+[submodule "pipelines/depth"]
+	path = pipelines/depth
+	url = git@github.com:shelf-sea/dians-depth.git
+[submodule "pipelines/iswall"]
+	path = pipelines/iswall
+	url = git@github.com:shelf-sea/dians-iswall.git
+[submodule "pipelines/indomain"]
+	path = pipelines/indomain
+	url = git@github.com:shelf-sea/dians-indomain.git
+[submodule "pipelines/maxage"]
+	path = pipelines/maxage
+	url = git@github.com:shelf-sea/dians-maxage.git
+[submodule "pipelines/mindepth"]
+	path = pipelines/mindepth
+	url = git@github.com:shelf-sea/dians-mindepth.git
+[submodule "pipelines/spg"]
+	path = pipelines/spg
+	url = git@github.com:shelf-sea/dians-spg.git
+[submodule "pipelines/initime"]
+	path = pipelines/initime
+	url = git@github.com:shelf-sea/dians-initime.git
