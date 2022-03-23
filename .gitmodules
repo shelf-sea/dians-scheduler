@@ -19,3 +19,9 @@
 [submodule "pipelines/initime"]
 	path = pipelines/initime
 	url = git@github.com:shelf-sea/dians-initime.git
+[submodule "pipelines/to_hdf5"]
+	path = pipelines/to_hdf5
+	url = git@github.com:shelf-sea/dians-to-hdf5.git
+[submodule "pipelines/tracmass"]
+	path = pipelines/tracmass
+	url = git@github.com:shelf-sea/dians-tracmass.git
