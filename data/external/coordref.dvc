@@ -1,0 +1,5 @@
+outs:
+- md5: 9ec2cf63265c78579df0f7b0f7798ef7.dir
+  size: 2523160
+  nfiles: 1
+  path: coordref
