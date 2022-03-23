@@ -1,9 +1,13 @@
 package_version: 'v2022.2.0'
 
 data:
+  allsat: "data/external/allsat"
+  globcurrent: "data/external/globcurrent"
+  armor-3d: "data/external/armor-3d"
   bathymetry: "data/external/bathymetry/GEBCO_2020.nc"
   coordref: "data/external/coordref/dt_global_allsat_phy_l4_20000101.nc"
   spg_index: "data/external/na-spg-ssh-pca/SSH_PCs_Monthly_199301_201912.csv"
+  csv: data/csv
   tracmass_csv: data/csv/TRACMASS_run.csv
   hdf5: data/hdf5
   tracmass_hdf5: data/hdf5/TRACMASS_run.hdf5
@@ -13,11 +17,11 @@ data:
   mindepth: data/hdf5/column_mindepth.hdf5
   maxage: data/hdf5/column_maxage.hdf5
   initime: data/hdf5/column_initime.hdf5
-  spgi: data/hdf5/column_spgi.hdf5 # subpolar gyre
-  naoi: data/hdf5/column_naoi.hdf5 # north atlantic oscillation
-  eapi: data/hdf5/column_eapi.hdf5 # east atlantic pattern
-  lwdi: data/hdf5/column_lwdi.hdf5 # local wind direction
-  jeti: data/hdf5/column_jeti.hdf5 # jet cluster
+  spg: data/hdf5/column_spg.hdf5 # subpolar gyre
+  nao: data/hdf5/column_nao.hdf5 # north atlantic oscillation
+  eap: data/hdf5/column_eap.hdf5 # east atlantic pattern
+  lwd: data/hdf5/column_lwd.hdf5 # local wind direction
+  jet: data/hdf5/column_jet.hdf5 # jet cluster
 
 static:
   coastline_resolution: "50m"

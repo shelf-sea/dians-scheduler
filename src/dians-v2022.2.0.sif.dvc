@@ -1,0 +1,5 @@
+outs:
+- md5: 77683a39c99ed5f45bdb656a5f082064
+  size: 720605184
+  path: dians-v2022.2.0.sif
+  isexec: true
